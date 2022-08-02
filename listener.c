@@ -390,6 +390,7 @@ evconnlistener_set_error_cb(struct evconnlistener *lev,
 	UNLOCK(lev);
 }
 
+// 调用accept接收新的连接，并执行用户传入的listener_cb回调函数。
 static void
 listener_read_cb(evutil_socket_t fd, short what, void *p)
 {
